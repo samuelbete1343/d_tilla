@@ -22,4 +22,5 @@ RUN DJANGO_SECRET_KEY=build-only-not-used-in-production \
 EXPOSE 8000
 
 # Use gunicorn in production — 3 workers is fine for ~2000 users
-CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120"]
+#CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120"]
+CMD python manage.py migrate --noinput && gunicorn core.wsgi:application
