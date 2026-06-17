@@ -1,0 +1,50 @@
+## render.yaml — Render.com deployment configuration
+##
+## HOW TO USE:
+##   1. Push your backend/ folder to a GitHub repo.
+##   2. On Render: New → Blueprint → connect the repo.
+##   3. Render reads this file and creates the web service + PostgreSQL.
+##   4. After first deploy, set the secret env vars in the Render dashboard
+##      (DJANGO_SECRET_KEY, CORS_ALLOWED_ORIGINS).
+##
+## FREE TIER NOTES:
+##   - Web service spins down after 15 min inactivity (cold start ~30s).
+##   - PostgreSQL free tier: 256 MB storage, expires after 90 days (upgrade to paid or use Supabase).
+##   - Media files (PDF notes) are EPHEMERAL — lost on redeploy.
+
+services:
+  - type: web
+    name: tilla-backend
+    runtime: python
+    region: oregon          # or frankfurt for EU users
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt &&
+      python manage.py collectstatic --noinput &&
+      python manage.py migrate --noinput
+    startCommand: gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    healthCheckPath: /api/courses/
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: core.settings
+      - key: DEBUG
+        value: "False"
+      - key: DJANGO_SECRET_KEY
+        sync: false          # Set manually in Render dashboard
+      - key: ALLOWED_HOSTS
+        value: tilla-backend.onrender.com   # Replace with your actual Render URL
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false          # Set manually: https://your-frontend.vercel.app
+      - key: SECURE_SSL_REDIRECT
+        value: "False"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tilla-db
+          property: connectionString
+
+databases:
+  - name: tilla-db
+    databaseName: tilla
+    user: tilla_user
+    plan: free
+    region: oregon
