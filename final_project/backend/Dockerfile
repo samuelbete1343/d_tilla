@@ -23,4 +23,4 @@ EXPOSE 8000
 
 # Use gunicorn in production — 3 workers is fine for ~2000 users
 #CMD ["gunicorn", "core.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3", "--timeout", "120"]
-CMD python manage.py migrate --noinput && gunicorn core.wsgi:application --bind 0.0.0.0:10000 --workers 3
+CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn core.wsgi:application --bind 0.0.0.0:10000"]
