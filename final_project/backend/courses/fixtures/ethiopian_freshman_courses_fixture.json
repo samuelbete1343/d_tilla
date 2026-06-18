@@ -1,0 +1,1208 @@
+[
+  {
+    "model": "courses.course",
+    "pk": 101,
+    "fields": {
+      "title": "Communicative English Skills I",
+      "slug": "communicative-english-skills-i",
+      "description": "Develops foundational English communication skills for Ethiopian university freshmen, covering listening, speaking, reading, and writing for academic and everyday contexts.",
+      "category": "Language",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "ENG-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 102,
+    "fields": {
+      "title": "Communicative English Skills II",
+      "slug": "communicative-english-skills-ii",
+      "description": "Builds on Communicative English Skills I with advanced reading comprehension, academic writing, and oral presentation skills needed for university success.",
+      "category": "Language",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "ENG-102",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 103,
+    "fields": {
+      "title": "Basic Writing Skills",
+      "slug": "basic-writing-skills",
+      "description": "Introduces the fundamentals of academic writing including paragraph structure, essay organization, grammar review, and citation techniques for university-level work.",
+      "category": "Language",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "ENG-103",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 104,
+    "fields": {
+      "title": "General Mathematics",
+      "slug": "general-mathematics",
+      "description": "Covers core mathematical topics for Ethiopian university freshmen including sets, functions, matrices, sequences, and introductory calculus.",
+      "category": "Mathematics",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "MATH-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 105,
+    "fields": {
+      "title": "Logic and Critical Thinking",
+      "slug": "logic-and-critical-thinking",
+      "description": "Introduces formal and informal logic, argument analysis, fallacies, and scientific reasoning to help students think critically across all disciplines.",
+      "category": "Philosophy",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "PHIL-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 106,
+    "fields": {
+      "title": "Civic and Ethical Education",
+      "slug": "civic-and-ethical-education",
+      "description": "Examines citizenship, democratic values, human rights, constitutional principles, and ethical frameworks relevant to Ethiopian civic life.",
+      "category": "Social Studies",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "CIVT-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 107,
+    "fields": {
+      "title": "History of Ethiopia and the Horn",
+      "slug": "history-of-ethiopia-and-the-horn",
+      "description": "Traces the political, cultural, and social history of Ethiopia and the Horn of Africa from ancient civilizations through the modern period.",
+      "category": "History",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "HIST-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 108,
+    "fields": {
+      "title": "Geography of Ethiopia and the Horn",
+      "slug": "geography-of-ethiopia-and-the-horn",
+      "description": "Studies the physical and human geography of Ethiopia and the Horn region, including landforms, climate, population, resources, and regional development.",
+      "category": "Geography",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "GEOG-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 109,
+    "fields": {
+      "title": "Social Anthropology",
+      "slug": "social-anthropology",
+      "description": "Explores human societies, cultures, kinship systems, religion, ethnicity, and social change with a focus on African and Ethiopian contexts.",
+      "category": "Social Studies",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "ANTH-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 110,
+    "fields": {
+      "title": "Introduction to Psychology",
+      "slug": "introduction-to-psychology",
+      "description": "Provides an overview of psychological science including biological bases of behavior, perception, learning, memory, personality, and mental health.",
+      "category": "Psychology",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "PSYC-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 111,
+    "fields": {
+      "title": "Introduction to Philosophy",
+      "slug": "introduction-to-philosophy",
+      "description": "Surveys major branches of philosophy including metaphysics, epistemology, ethics, aesthetics, and political philosophy through classic and contemporary texts.",
+      "category": "Philosophy",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "PHIL-102",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 112,
+    "fields": {
+      "title": "Information Technology",
+      "slug": "information-technology",
+      "description": "Introduces computer hardware, software, operating systems, networking, internet fundamentals, and practical digital literacy skills for university students.",
+      "category": "Technology",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "ICT-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 113,
+    "fields": {
+      "title": "General Physics",
+      "slug": "general-physics",
+      "description": "Covers classical mechanics, waves, thermodynamics, electricity, and magnetism with problem-solving emphasis for science and engineering freshmen.",
+      "category": "Science",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "PHYS-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 114,
+    "fields": {
+      "title": "General Chemistry",
+      "slug": "general-chemistry",
+      "description": "Introduces atomic structure, chemical bonding, stoichiometry, states of matter, thermochemistry, and reaction kinetics for science and engineering students.",
+      "category": "Science",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "CHEM-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 115,
+    "fields": {
+      "title": "General Biology",
+      "slug": "general-biology",
+      "description": "Surveys the fundamental principles of life including cell biology, genetics, evolution, ecology, and the diversity of living organisms.",
+      "category": "Science",
+      "price": "0.00",
+      "image": null,
+      "is_published": true,
+      "catalogue_code": "BIOL-101",
+      "created_at": "2026-01-01T00:00:00Z",
+      "updated_at": "2026-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1001,
+    "fields": {
+      "course": 101,
+      "title": "Introduction to Academic English",
+      "description": "Overview of the course, importance of English in academic settings, and a diagnostic assessment of communication skills.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 660,
+      "youtube_url": "https://www.youtube.com/watch?v=3bK9Y9wdaqM",
+      "youtube_video_id": "3bK9Y9wdaqM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1002,
+    "fields": {
+      "course": 101,
+      "title": "Listening Skills: Understanding Main Ideas",
+      "description": "Strategies for identifying main ideas and supporting details while listening to lectures and conversations.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=xH_7SHmj2Cs",
+      "youtube_video_id": "xH_7SHmj2Cs"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1003,
+    "fields": {
+      "course": 101,
+      "title": "Speaking Skills: Participating in Discussions",
+      "description": "How to express opinions, ask questions, and take turns in academic discussions and group work.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=IVjZMIwhz5Y",
+      "youtube_video_id": "IVjZMIwhz5Y"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1004,
+    "fields": {
+      "course": 101,
+      "title": "Reading Comprehension: Skimming and Scanning",
+      "description": "Techniques for quickly finding information and understanding the gist of academic texts.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 690,
+      "youtube_url": "https://www.youtube.com/watch?v=6Nj_1Y7cUzY",
+      "youtube_video_id": "6Nj_1Y7cUzY"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1005,
+    "fields": {
+      "course": 101,
+      "title": "Vocabulary Building for Academic Contexts",
+      "description": "Strategies for learning and using academic vocabulary from the Academic Word List in context.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=Q7e7oFWe55Y",
+      "youtube_video_id": "Q7e7oFWe55Y"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1006,
+    "fields": {
+      "course": 102,
+      "title": "Advanced Reading Strategies",
+      "description": "Critical reading of academic articles: annotating, evaluating arguments, and synthesizing information from multiple sources.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=fSwpe24KGpM",
+      "youtube_video_id": "fSwpe24KGpM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1007,
+    "fields": {
+      "course": 102,
+      "title": "Oral Presentations: Structure and Delivery",
+      "description": "How to plan, structure, and deliver an effective academic presentation with confidence.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=V8eLdbKXGzE",
+      "youtube_video_id": "V8eLdbKXGzE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1008,
+    "fields": {
+      "course": 102,
+      "title": "Writing Summaries and Paraphrases",
+      "description": "Techniques for accurately summarizing and paraphrasing source material while avoiding plagiarism.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 690,
+      "youtube_url": "https://www.youtube.com/watch?v=GMb5pSAFLRY",
+      "youtube_video_id": "GMb5pSAFLRY"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1009,
+    "fields": {
+      "course": 102,
+      "title": "Grammar Review: Complex Sentences",
+      "description": "Using subordinate clauses, relative clauses, and conjunctions to write complex academic sentences.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 660,
+      "youtube_url": "https://www.youtube.com/watch?v=9aBaLyJhOUI",
+      "youtube_video_id": "9aBaLyJhOUI"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1010,
+    "fields": {
+      "course": 103,
+      "title": "The Writing Process: Planning to Drafting",
+      "description": "Step-by-step guide through brainstorming, outlining, drafting, and revising academic writing.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 700,
+      "youtube_url": "https://www.youtube.com/watch?v=aIsgJZzg-xE",
+      "youtube_video_id": "aIsgJZzg-xE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1011,
+    "fields": {
+      "course": 103,
+      "title": "Paragraph Structure and Unity",
+      "description": "Writing focused paragraphs with clear topic sentences, supporting details, and concluding sentences.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=sVURbm3OYSE",
+      "youtube_video_id": "sVURbm3OYSE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1012,
+    "fields": {
+      "course": 103,
+      "title": "Essay Organization: Introduction, Body, Conclusion",
+      "description": "How to structure a five-paragraph essay with a strong thesis statement and coherent body paragraphs.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=MYMMLJJbBLc",
+      "youtube_video_id": "MYMMLJJbBLc"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1013,
+    "fields": {
+      "course": 103,
+      "title": "Punctuation and Grammar Essentials",
+      "description": "Review of common punctuation rules, subject-verb agreement, tense consistency, and sentence fragments.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 660,
+      "youtube_url": "https://www.youtube.com/watch?v=cPmkNqyGFGE",
+      "youtube_video_id": "cPmkNqyGFGE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1014,
+    "fields": {
+      "course": 103,
+      "title": "Citation and Referencing Basics",
+      "description": "Introduction to APA and MLA citation styles, in-text citations, and building a reference list.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 630,
+      "youtube_url": "https://www.youtube.com/watch?v=DcsBIRdFk-Q",
+      "youtube_video_id": "DcsBIRdFk-Q"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1015,
+    "fields": {
+      "course": 104,
+      "title": "Sets, Relations, and Functions",
+      "description": "Set notation, Venn diagrams, types of functions, domain and range, and function composition.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=tyDKR4FG3Yw",
+      "youtube_video_id": "tyDKR4FG3Yw"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1016,
+    "fields": {
+      "course": 104,
+      "title": "Matrices and Determinants",
+      "description": "Matrix operations, determinants, inverse matrices, and solving systems of linear equations.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 960,
+      "youtube_url": "https://www.youtube.com/watch?v=rowWM-MijXU",
+      "youtube_video_id": "rowWM-MijXU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1017,
+    "fields": {
+      "course": 104,
+      "title": "Sequences and Series",
+      "description": "Arithmetic and geometric sequences, sigma notation, and infinite series convergence basics.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=XZJdyPkCxuE",
+      "youtube_video_id": "XZJdyPkCxuE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1018,
+    "fields": {
+      "course": 104,
+      "title": "Introduction to Differential Calculus",
+      "description": "Limits, continuity, derivatives, differentiation rules, and applications to rate of change problems.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 1020,
+      "youtube_url": "https://www.youtube.com/watch?v=WsQQvHm4lSw",
+      "youtube_video_id": "WsQQvHm4lSw"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1019,
+    "fields": {
+      "course": 104,
+      "title": "Introduction to Integral Calculus",
+      "description": "Indefinite and definite integrals, the Fundamental Theorem of Calculus, and area under a curve.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 1020,
+      "youtube_url": "https://www.youtube.com/watch?v=-_POEWfygmU",
+      "youtube_video_id": "-_POEWfygmU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1020,
+    "fields": {
+      "course": 105,
+      "title": "What Is Logic? Arguments and Premises",
+      "description": "Introduction to logical reasoning, identifying arguments, premises, conclusions, and the difference between valid and sound arguments.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=NKEhdsnKKHs",
+      "youtube_video_id": "NKEhdsnKKHs"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1021,
+    "fields": {
+      "course": 105,
+      "title": "Deductive and Inductive Reasoning",
+      "description": "Distinguishing deductive validity from inductive strength, with syllogisms and real-world argument examples.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=OllkF-wINS8",
+      "youtube_video_id": "OllkF-wINS8"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1022,
+    "fields": {
+      "course": 105,
+      "title": "Logical Fallacies",
+      "description": "Common informal fallacies including ad hominem, straw man, false dilemma, and slippery slope, with practice identifying them.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=xDTkzGnbBJU",
+      "youtube_video_id": "xDTkzGnbBJU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1023,
+    "fields": {
+      "course": 105,
+      "title": "Scientific Reasoning and Evidence",
+      "description": "How science generates and evaluates evidence, hypothesis testing, and distinguishing science from pseudoscience.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=EYPapE-3FRw",
+      "youtube_video_id": "EYPapE-3FRw"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1024,
+    "fields": {
+      "course": 106,
+      "title": "Citizenship and Democratic Values",
+      "description": "Concepts of citizenship, rights and responsibilities, democratic participation, and civic engagement in Ethiopia.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=wMACuMDL9lk",
+      "youtube_video_id": "wMACuMDL9lk"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1025,
+    "fields": {
+      "course": 106,
+      "title": "The Ethiopian Constitution and Human Rights",
+      "description": "Key provisions of the FDRE Constitution, the Bill of Rights, and Ethiopia's human rights obligations.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=yBM-p0r2kBk",
+      "youtube_video_id": "yBM-p0r2kBk"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1026,
+    "fields": {
+      "course": 106,
+      "title": "Ethical Theories: An Overview",
+      "description": "Introduction to major ethical theories — consequentialism, deontology, and virtue ethics — and their application to moral dilemmas.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=FOoffXFpAlU",
+      "youtube_video_id": "FOoffXFpAlU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1027,
+    "fields": {
+      "course": 106,
+      "title": "Good Governance and Anti-Corruption",
+      "description": "Principles of good governance, transparency, accountability, and the social costs of corruption in Ethiopia.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=MEcB2MiuL4g",
+      "youtube_video_id": "MEcB2MiuL4g"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1028,
+    "fields": {
+      "course": 107,
+      "title": "Ancient Civilizations: Aksum and D'mt",
+      "description": "The rise and fall of the Aksumite Empire, the D'mt kingdom, trade networks, and early Christianity in Ethiopia.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 870,
+      "youtube_url": "https://www.youtube.com/watch?v=b2TAXKoFHBs",
+      "youtube_video_id": "b2TAXKoFHBs"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1029,
+    "fields": {
+      "course": 107,
+      "title": "Medieval Ethiopia: The Zagwe and Solomonic Dynasties",
+      "description": "Lalibela rock-hewn churches, restoration of the Solomonic dynasty, and medieval Ethiopian statehood.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=Qd8_EuVFCck",
+      "youtube_video_id": "Qd8_EuVFCck"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1030,
+    "fields": {
+      "course": 107,
+      "title": "The Era of Princes and Ethiopian Reform",
+      "description": "Zemene Mesafint (Era of Princes), Emperor Tewodros II's reforms, and the reunification of Ethiopia.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=KSGZ6fcKOr8",
+      "youtube_video_id": "KSGZ6fcKOr8"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1031,
+    "fields": {
+      "course": 107,
+      "title": "The Battle of Adwa and Ethiopian Sovereignty",
+      "description": "Emperor Menelik II, the 1896 Battle of Adwa, Ethiopia's victory against Italian colonialism, and its global significance.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=_SfSeILqNss",
+      "youtube_video_id": "_SfSeILqNss"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1032,
+    "fields": {
+      "course": 107,
+      "title": "Modern Ethiopia: From Haile Selassie to the Present",
+      "description": "Emperor Haile Selassie's reign, the Derg regime, the EPRDF era, and key developments in contemporary Ethiopian politics.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 960,
+      "youtube_url": "https://www.youtube.com/watch?v=kVQHSa4UPcU",
+      "youtube_video_id": "kVQHSa4UPcU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1033,
+    "fields": {
+      "course": 108,
+      "title": "Physical Geography: Landforms and Rift Valley",
+      "description": "Ethiopian Highlands, the Great Rift Valley, major rivers (Nile, Awash, Omo), and diverse ecological zones.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=VKFgFRGiHHg",
+      "youtube_video_id": "VKFgFRGiHHg"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1034,
+    "fields": {
+      "course": 108,
+      "title": "Climate and Agro-Ecological Zones",
+      "description": "Climatic patterns of Ethiopia and the Horn, rainfall distribution, drought vulnerability, and the main agro-ecological zones.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=5EFd3hDVNCs",
+      "youtube_video_id": "5EFd3hDVNCs"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1035,
+    "fields": {
+      "course": 108,
+      "title": "Population and Ethnic Geography",
+      "description": "Population distribution, ethnic diversity, urbanization trends, and major cities of Ethiopia and the Horn.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=GDex4k9OQNE",
+      "youtube_video_id": "GDex4k9OQNE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1036,
+    "fields": {
+      "course": 108,
+      "title": "Natural Resources and Economic Geography",
+      "description": "Agriculture, minerals, water resources, energy potential, and regional economic development in the Horn of Africa.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=OFzjHI8M4eA",
+      "youtube_video_id": "OFzjHI8M4eA"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1037,
+    "fields": {
+      "course": 109,
+      "title": "What Is Social Anthropology?",
+      "description": "Origins of anthropology, its sub-disciplines, fieldwork methods, and the concept of culture.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=VLVnPQwmBz4",
+      "youtube_video_id": "VLVnPQwmBz4"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1038,
+    "fields": {
+      "course": 109,
+      "title": "Kinship, Family, and Marriage",
+      "description": "Systems of kinship and descent, family structures, and marriage practices across cultures with Ethiopian examples.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=YKbEwGJHUgA",
+      "youtube_video_id": "YKbEwGJHUgA"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1039,
+    "fields": {
+      "course": 109,
+      "title": "Religion, Ritual, and Belief Systems",
+      "description": "Anthropological perspectives on religion, ritual practice, indigenous beliefs, and the role of religion in social cohesion.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=rYo_m79UGnE",
+      "youtube_video_id": "rYo_m79UGnE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1040,
+    "fields": {
+      "course": 109,
+      "title": "Ethnicity, Identity, and Social Change",
+      "description": "Ethnic identity formation, intergroup relations, modernization, and cultural change in African societies.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=oNx3GM_wf-0",
+      "youtube_video_id": "oNx3GM_wf-0"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1041,
+    "fields": {
+      "course": 110,
+      "title": "What Is Psychology? History and Perspectives",
+      "description": "Definition, history, and major theoretical perspectives in psychology — psychoanalytic, behavioral, cognitive, and humanistic.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=vo4pMVb0R6M",
+      "youtube_video_id": "vo4pMVb0R6M"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1042,
+    "fields": {
+      "course": 110,
+      "title": "Biological Bases of Behavior",
+      "description": "The nervous system, brain structures, neurotransmitters, and how biology shapes human thought and behavior.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 870,
+      "youtube_url": "https://www.youtube.com/watch?v=qPix_X-9t7E",
+      "youtube_video_id": "qPix_X-9t7E"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1043,
+    "fields": {
+      "course": 110,
+      "title": "Learning, Memory, and Cognition",
+      "description": "Classical and operant conditioning, memory systems, forgetting, and cognitive processes that underlie human learning.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=jBGplCkYbOA",
+      "youtube_video_id": "jBGplCkYbOA"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1044,
+    "fields": {
+      "course": 110,
+      "title": "Personality and Individual Differences",
+      "description": "Major theories of personality — trait, psychoanalytic, and social-cognitive — and how personality is measured.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=5QSuMhFOSl4",
+      "youtube_video_id": "5QSuMhFOSl4"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1045,
+    "fields": {
+      "course": 110,
+      "title": "Mental Health: Stress, Disorders, and Wellbeing",
+      "description": "Understanding stress, common psychological disorders (anxiety, depression), and strategies for maintaining mental wellbeing.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=3hd0HVZQp_A",
+      "youtube_video_id": "3hd0HVZQp_A"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1046,
+    "fields": {
+      "course": 111,
+      "title": "What Is Philosophy? Questions and Methods",
+      "description": "The nature of philosophical inquiry, core questions, and methods of philosophical analysis.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=1A_CAkYt3GY",
+      "youtube_video_id": "1A_CAkYt3GY"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1047,
+    "fields": {
+      "course": 111,
+      "title": "Epistemology: Knowledge and Belief",
+      "description": "What is knowledge? Rationalism vs. empiricism, justified true belief, skepticism, and the limits of human knowledge.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=VJHJgPKzDuU",
+      "youtube_video_id": "VJHJgPKzDuU"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1048,
+    "fields": {
+      "course": 111,
+      "title": "Metaphysics: Reality and Existence",
+      "description": "Core metaphysical questions — existence, identity, free will, mind-body problem, and the nature of reality.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=N-eTcjGsK08",
+      "youtube_video_id": "N-eTcjGsK08"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1049,
+    "fields": {
+      "course": 111,
+      "title": "Ethics and Political Philosophy",
+      "description": "The good life, justice, social contract theory, and the philosophical foundations of political institutions.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=kBdfcR-8hEY",
+      "youtube_video_id": "kBdfcR-8hEY"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1050,
+    "fields": {
+      "course": 112,
+      "title": "Introduction to Computers and Hardware",
+      "description": "Computer components, CPU, memory, storage devices, input/output peripherals, and how they work together.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 780,
+      "youtube_url": "https://www.youtube.com/watch?v=ExxFxD4OSZ0",
+      "youtube_video_id": "ExxFxD4OSZ0"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1051,
+    "fields": {
+      "course": 112,
+      "title": "Operating Systems and Software",
+      "description": "Role of operating systems, file management, application software types, and open-source vs. proprietary software.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 750,
+      "youtube_url": "https://www.youtube.com/watch?v=9GDX-IyZ_C8",
+      "youtube_video_id": "9GDX-IyZ_C8"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1052,
+    "fields": {
+      "course": 112,
+      "title": "Networking and the Internet",
+      "description": "Network types (LAN, WAN), TCP/IP basics, how the internet works, HTTP, and cybersecurity fundamentals.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=3QhU9jd03a0",
+      "youtube_video_id": "3QhU9jd03a0"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1053,
+    "fields": {
+      "course": 112,
+      "title": "Productivity Tools: Word Processing and Spreadsheets",
+      "description": "Practical use of Microsoft Word, Excel, and presentation software for academic and professional tasks.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 720,
+      "youtube_url": "https://www.youtube.com/watch?v=AWhbzHILVeM",
+      "youtube_video_id": "AWhbzHILVeM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1054,
+    "fields": {
+      "course": 112,
+      "title": "Digital Literacy and Online Safety",
+      "description": "Responsible internet use, recognizing misinformation, data privacy, social media ethics, and safe digital habits.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 660,
+      "youtube_url": "https://www.youtube.com/watch?v=LFjFgByPLkE",
+      "youtube_video_id": "LFjFgByPLkE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1055,
+    "fields": {
+      "course": 113,
+      "title": "Mechanics: Motion, Forces, and Newton's Laws",
+      "description": "Kinematics, Newton's three laws of motion, friction, and solving force-body problems.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 960,
+      "youtube_url": "https://www.youtube.com/watch?v=ZM8ECpBuQYE",
+      "youtube_video_id": "ZM8ECpBuQYE"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1056,
+    "fields": {
+      "course": 113,
+      "title": "Work, Energy, and Conservation Laws",
+      "description": "Work-energy theorem, kinetic and potential energy, conservation of energy, and power calculations.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=w4QFJb9a8vo",
+      "youtube_video_id": "w4QFJb9a8vo"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1057,
+    "fields": {
+      "course": 113,
+      "title": "Waves and Sound",
+      "description": "Properties of waves, wave equation, sound waves, the Doppler effect, and resonance phenomena.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 870,
+      "youtube_url": "https://www.youtube.com/watch?v=TN14b5wjnkQ",
+      "youtube_video_id": "TN14b5wjnkQ"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1058,
+    "fields": {
+      "course": 113,
+      "title": "Electricity and Magnetism",
+      "description": "Electric charge, Coulomb's law, electric circuits (Ohm's law, series/parallel), and magnetic fields.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 1020,
+      "youtube_url": "https://www.youtube.com/watch?v=mc979OhitAg",
+      "youtube_video_id": "mc979OhitAg"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1059,
+    "fields": {
+      "course": 113,
+      "title": "Thermodynamics: Heat and Temperature",
+      "description": "Temperature scales, heat transfer, the laws of thermodynamics, and entropy.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=4i1MUWJoI0U",
+      "youtube_video_id": "4i1MUWJoI0U"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1060,
+    "fields": {
+      "course": 114,
+      "title": "Atomic Structure and the Periodic Table",
+      "description": "Atomic theory, subatomic particles, electron configuration, and periodic trends.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=oqMN3y8k9So",
+      "youtube_video_id": "oqMN3y8k9So"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1061,
+    "fields": {
+      "course": 114,
+      "title": "Chemical Bonding: Ionic and Covalent Bonds",
+      "description": "Types of chemical bonds, Lewis structures, molecular geometry (VSEPR theory), and polarity.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 960,
+      "youtube_url": "https://www.youtube.com/watch?v=QXT4OVM4vXI",
+      "youtube_video_id": "QXT4OVM4vXI"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1062,
+    "fields": {
+      "course": 114,
+      "title": "Stoichiometry and Chemical Equations",
+      "description": "Balancing equations, molar mass, mole concept, limiting reagents, and percent yield calculations.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 1020,
+      "youtube_url": "https://www.youtube.com/watch?v=UL1jmJaUkaQ",
+      "youtube_video_id": "UL1jmJaUkaQ"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1063,
+    "fields": {
+      "course": 114,
+      "title": "States of Matter and Solutions",
+      "description": "Gas laws, liquid and solid properties, concentration units, solubility, and colligative properties.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=pKvo0XTZByk",
+      "youtube_video_id": "pKvo0XTZByk"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1064,
+    "fields": {
+      "course": 114,
+      "title": "Thermochemistry and Reaction Kinetics",
+      "description": "Enthalpy, Hess's law, activation energy, and factors that affect the rate of chemical reactions.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 960,
+      "youtube_url": "https://www.youtube.com/watch?v=OEcuH9uxNJM",
+      "youtube_video_id": "OEcuH9uxNJM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1065,
+    "fields": {
+      "course": 115,
+      "title": "Cell Biology: The Basic Unit of Life",
+      "description": "Prokaryotic and eukaryotic cells, cell organelles, cell membrane structure, and transport mechanisms.",
+      "order_index": 1,
+      "is_free_preview": true,
+      "duration_seconds": 900,
+      "youtube_url": "https://www.youtube.com/watch?v=URUJD5NEXC8",
+      "youtube_video_id": "URUJD5NEXC8"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1066,
+    "fields": {
+      "course": 115,
+      "title": "Genetics: DNA, Heredity, and Inheritance",
+      "description": "DNA structure, replication, transcription, translation, Mendel's laws, and patterns of inheritance.",
+      "order_index": 2,
+      "is_free_preview": false,
+      "duration_seconds": 990,
+      "youtube_url": "https://www.youtube.com/watch?v=_-vZ_g7K6P0",
+      "youtube_video_id": "_-vZ_g7K6P0"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1067,
+    "fields": {
+      "course": 115,
+      "title": "Evolution and Natural Selection",
+      "description": "Darwin's theory of evolution, evidence for evolution, natural selection, adaptation, and speciation.",
+      "order_index": 3,
+      "is_free_preview": false,
+      "duration_seconds": 870,
+      "youtube_url": "https://www.youtube.com/watch?v=GcjgWov7mTM",
+      "youtube_video_id": "GcjgWov7mTM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1068,
+    "fields": {
+      "course": 115,
+      "title": "Ecology: Organisms and Their Environment",
+      "description": "Ecosystems, food chains, energy flow, biogeochemical cycles, biodiversity, and human impacts on ecosystems.",
+      "order_index": 4,
+      "is_free_preview": false,
+      "duration_seconds": 840,
+      "youtube_url": "https://www.youtube.com/watch?v=izRvPMoHZGM",
+      "youtube_video_id": "izRvPMoHZGM"
+    }
+  },
+  {
+    "model": "courses.lesson",
+    "pk": 1069,
+    "fields": {
+      "course": 115,
+      "title": "Diversity of Life: Classification and Major Groups",
+      "description": "Biological classification (taxonomy), the five/six kingdoms, and key characteristics of major groups from bacteria to mammals.",
+      "order_index": 5,
+      "is_free_preview": false,
+      "duration_seconds": 810,
+      "youtube_url": "https://www.youtube.com/watch?v=4H_KpphJdao",
+      "youtube_video_id": "4H_KpphJdao"
+    }
+  }
+]
