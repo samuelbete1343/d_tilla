@@ -7,25 +7,27 @@ django.setup()
 
 from django.contrib.auth import get_user_model
 
-# Force Admin Update Logic
+# Force Admin Update Logic for Email-based Login
 try:
     User = get_user_model()
-    username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
-    password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'TillaAdmin123!')
+    # Your model uses email as the unique field
     email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
+    password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'TillaAdmin123!')
+    full_name = os.environ.get('DJANGO_SUPERUSER_FULL_NAME', 'Admin User')
 
-    # If the user exists, update them. If not, create them.
-    user, created = User.objects.get_or_create(username=username)
+    # Find the user by email
+    user, created = User.objects.get_or_create(email=email)
     user.set_password(password)
-    user.email = email
+    user.full_name = full_name
     user.is_staff = True
     user.is_superuser = True
+    user.is_active = True
     user.save()
     
     if created:
-        print(f"ADMIN FIXER: Created new superuser {username}")
+        print(f"ADMIN FIXER: Created new superuser with email: {email}")
     else:
-        print(f"ADMIN FIXER: Updated existing user {username} and forced password")
+        print(f"ADMIN FIXER: Updated existing user {email} and forced password/staff status")
 
 except Exception as e:
     print(f"ADMIN FIXER ERROR: {e}")
