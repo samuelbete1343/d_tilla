@@ -2,20 +2,32 @@ import os
 import django
 from django.core.wsgi import get_wsgi_application
 
-# FIX: Added the 'S' to SETTINGS
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
-
-# Initialize Django before running any commands
 django.setup()
 
-from django.core.management import call_command
+from django.contrib.auth import get_user_model
 
-# Emergency migration trigger
+# Force Admin Update Logic
 try:
-    print("Checking for database migrations...")
-    call_command('migrate', interactive=False)
-    print("Migrations completed successfully!")
+    User = get_user_model()
+    username = os.environ.get('DJANGO_SUPERUSER_USERNAME', 'admin')
+    password = os.environ.get('DJANGO_SUPERUSER_PASSWORD', 'TillaAdmin123!')
+    email = os.environ.get('DJANGO_SUPERUSER_EMAIL', 'admin@example.com')
+
+    # If the user exists, update them. If not, create them.
+    user, created = User.objects.get_or_create(username=username)
+    user.set_password(password)
+    user.email = email
+    user.is_staff = True
+    user.is_superuser = True
+    user.save()
+    
+    if created:
+        print(f"ADMIN FIXER: Created new superuser {username}")
+    else:
+        print(f"ADMIN FIXER: Updated existing user {username} and forced password")
+
 except Exception as e:
-    print(f"Migration failed or skipped: {e}")
+    print(f"ADMIN FIXER ERROR: {e}")
 
 application = get_wsgi_application()
