@@ -28,12 +28,14 @@ import {
   XCircle,
   Send,
   ExternalLink,
+  Upload,
 } from 'lucide-react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { apiFetch, unwrap } from '../lib/api';
 import AuthModal from '../components/AuthModal';
+import BulkCourseImport from '../components/BulkCourseImport';
 
 // ---------------------------------------------------------------------------
 // Types — aligned to new backend API shapes
@@ -464,6 +466,19 @@ export default function Dashboard() {
             {renderSidebarItem('profile',   User,            'My Profile')}
             <div className="pt-4 pb-2"><div className="h-px bg-slate-100 dark:bg-slate-800 mx-2" /></div>
             {renderSidebarItem('settings',  Settings,        'Settings')}
+            {authUser?.is_admin && (
+              <>
+                <div className="pt-4 pb-2">
+                  <div className="h-px bg-slate-100 dark:bg-slate-800 mx-2" />
+                  {isSidebarOpen && (
+                    <p className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 dark:text-slate-600 px-4 mt-3 mb-1">
+                      Admin
+                    </p>
+                  )}
+                </div>
+                {renderSidebarItem('admin-import', Upload, 'Import Courses')}
+              </>
+            )}
           </nav>
 
           {isSidebarOpen && (
@@ -951,6 +966,12 @@ export default function Dashboard() {
             )}
 
           </AnimatePresence>
+
+            {/* ─── ADMIN: BULK IMPORT ─── */}
+            {activeTab === 'admin-import' && authUser?.is_admin && (
+              <BulkCourseImport />
+            )}
+
         </div>
       </main>
     </div>

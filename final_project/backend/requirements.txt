@@ -1,5 +1,4 @@
 # Tilla backend — production dependencies
-# Generated for deployment on Render / Railway
 # Python 3.11+
 
 # Core
@@ -14,11 +13,14 @@ gunicorn>=21.2.0
 # PostgreSQL driver (binary = no build deps needed on Render)
 psycopg2-binary>=2.9.9
 
-# Database URL parsing (reads DATABASE_URL from Railway/Render/Supabase)
+# Database URL parsing
 dj-database-url>=2.1.0
 
-# Static file serving without nginx (WhiteNoise)
+# Static file serving
 whitenoise>=6.6.0
 
 # .env loading for local development
 python-dotenv>=1.0.0
+
+# XLSX parsing for bulk course import (pure Python, no C deps)
+openpyxl>=3.1.0
