@@ -286,32 +286,180 @@ class BulkCourseImportView(APIView):
     parser_classes     = [MultiPartParser, FormParser]
 
     def post(self, request):
-        # ... (keep steps 1, 2, 3, 4, and 5 the same as your current file) ...
+        # ── 1. Validate file present ────────────────────────────────────────
+        uploaded = request.FILES.get("file")
+        if not uploaded:
+            return Response(
+                {"message": "No file uploaded. Send a multipart/form-data POST with field 'file'."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # ── 2. File size guard ──────────────────────────────────────────────
+        if uploaded.size > MAX_FILE_SIZE:
+            return Response(
+                {"message": f"File too large. Maximum allowed size is {MAX_FILE_SIZE // (1024*1024)} MB."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # ── 3. Detect format ────────────────────────────────────────────────
+        filename    = uploaded.name.lower()
+        file_bytes  = uploaded.read()
+
+        if filename.endswith(".csv"):
+            try:
+                rows = _parse_csv(file_bytes)
+            except Exception as exc:
+                logger.warning("CSV parse error: %s", exc)
+                return Response(
+                    {"message": f"Could not parse CSV file: {exc}"},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+        elif filename.endswith(".xlsx"):
+            try:
+                rows = _parse_xlsx(file_bytes)
+            except ImportError as exc:
+                return Response(
+                    {"message": str(exc)},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                )
+            except Exception as exc:
+                logger.warning("XLSX parse error: %s", exc)
+                return Response(
+                    {"message": f"Could not parse XLSX file: {exc}"},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+        elif filename.endswith(".json"):
+            try:
+                rows = _parse_json(file_bytes)
+            except (ValueError, Exception) as exc:
+                logger.warning("JSON parse error: %s", exc)
+                return Response(
+                    {"message": f"Could not parse JSON file: {exc}"},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
+        else:
+            ext = filename.rsplit(".", 1)[-1] if "." in filename else "unknown"
+            return Response(
+                {"message": f"Unsupported file type '.{ext}'. Please upload a .csv, .xlsx, or .json file."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not rows:
+            return Response(
+                {"message": "The file is empty or contains only a header row."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # ── 4. Load existing titles for duplicate detection ─────────────────
+        existing_titles_lower = {
+            t.lower() for t in Course.objects.values_list("title", flat=True)
+        }
+
+        # ── 5. Process each row ─────────────────────────────────────────────
+        results        = []
+        courses_to_create: list[tuple[int, str, Course, list]] = []
+        seen_titles_this_import: set[str] = set()
+
+        for idx, row in enumerate(rows, start=1):
+            row_title = str(row.get("title", "") or "").strip()
+
+            # Validate
+            error_msg = _validate_row(row, idx)
+            if error_msg:
+                results.append({
+                    "row":    idx,
+                    "title":  row_title or None,
+                    "status": "error",
+                    "reason": error_msg,
+                })
+                continue
+
+            # Duplicate: already in DB
+            if row_title.lower() in existing_titles_lower:
+                results.append({
+                    "row":    idx,
+                    "title":  row_title,
+                    "status": "skipped",
+                    "reason": "A course with this title already exists in the database.",
+                })
+                continue
+
+            # Duplicate: already seen in this import batch
+            if row_title.lower() in seen_titles_this_import:
+                results.append({
+                    "row":    idx,
+                    "title":  row_title,
+                    "status": "skipped",
+                    "reason": "Duplicate title found earlier in this import file.",
+                })
+                continue
+
+            # Build Course object
+            base_slug = slugify(row_title)
+            slug      = _unique_slug(base_slug)
+
+            # FIX: JSON imports default is_published=True so courses are
+            # immediately visible. CSV/XLSX default remains False.
+            default_published = filename.endswith(".json")
+
+            course = Course(
+                title          = row_title,
+                slug           = slug,
+                description    = str(row.get("description", "") or "").strip(),
+                category       = str(row.get("category", "") or "").strip(),
+                price          = _parse_decimal(row.get("price")),
+                image          = str(row.get("image", "") or "").strip() or None,
+                is_published   = _parse_bool(row.get("is_published"), default=default_published),
+                catalogue_code = str(row.get("catalogue_code", "") or "").strip(),
+            )
+
+            # Collect embedded lessons (JSON format only)
+            lessons_data = row.get("lessons") or []
+
+            courses_to_create.append((idx, row_title, course, lessons_data))
+            seen_titles_this_import.add(row_title.lower())
+            existing_titles_lower.add(row_title.lower())
 
         # ── 6. Create courses + lessons in one transaction ──────────────────
         created_count = 0
         if courses_to_create:
             try:
-                # FIX: We use a dictionary to store the ACTUAL count of lessons
-                # created after the _build_lessons function filters out bad rows.
-                actual_lesson_counts = {}
-
                 with transaction.atomic():
                     all_lessons: list[Lesson] = []
 
                     for _, _, course_obj, lessons_data in courses_to_create:
-                        course_obj.save()   # assigns PK
+                        course_obj.save()   # assigns PK, triggers slug generation
 
                         if lessons_data:
                             lesson_objs = _build_lessons(course_obj, lessons_data)
                             all_lessons.extend(lesson_objs)
-                            # FIX: Store the actual count of valid objects
-                            actual_lesson_counts[course_obj.slug] = len(lesson_objs)
-                        else:
-                            actual_lesson_counts[course_obj.slug] = 0
 
                     if all_lessons:
-                        Lesson.objects.b
+                        # bulk_create is safe here: youtube_video_id is
+                        # pre-filled in _build_lessons() so save() is not needed.
+                        Lesson.objects.bulk_create(all_lessons, batch_size=500)
+
+                for row_num, row_title, _, lessons_data in courses_to_create:
+                    lesson_count = len(lessons_data)
+                    results.append({
+                        "row":          row_num,
+                        "title":        row_title,
+                        "status":       "created",
+                        "reason":       None,
+                        "lesson_count": lesson_count,
+                    })
+                    created_count += 1
+
+            except Exception as exc:
+                logger.exception("Bulk import transaction failed: %s", exc)
+                return Response(
+                    {"message": f"Database error during import: {exc}"},
+                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                )
+
+        # ── 7. Sort results by row number and return ─────────────────────────
+        results.sort(key=lambda r: r["row"])
+
         skipped_count = sum(1 for r in results if r["status"] == "skipped")
         error_count   = sum(1 for r in results if r["status"] == "error")
 
